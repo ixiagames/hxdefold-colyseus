@@ -21,6 +21,10 @@ extern class Room {
     public function on(event:RoomEvent, handler:Function):Void;
     public function on_message(type:EitherType<String, Int>, handler:(message:Dynamic)->Void):Void;
 
+    public inline function on_state_change(handler:(state:Dynamic)->Void):Void on(STATE_CHANGE, handler);
+    public inline function on_leave(handler:Void->Void):Void on(LEAVE, handler);
+    public inline function on_error(handler:(code:Int, message:String)->Void):Void on(ERROR, handler);
+
 }
 
 enum abstract RoomEvent(String) {
