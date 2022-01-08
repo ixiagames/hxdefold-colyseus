@@ -26,5 +26,7 @@ extern class Room {
 enum abstract RoomEvent(String) {
 
     var STATE_CHANGE = "statechange";
+    var LEAVE = "leave";
+    var ERROR = "error";
     
 }
