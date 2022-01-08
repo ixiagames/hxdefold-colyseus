@@ -19,6 +19,7 @@ extern class Room {
 
     public function send(type:EitherType<String, Int>, ?message:Dynamic):Void;
     public function on(event:RoomEvent, handler:Function):Void;
+    public function on_message(type:EitherType<String, Int>, handler:(message:Dynamic)->Void):Void;
 
 }
 
