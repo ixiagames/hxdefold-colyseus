@@ -14,6 +14,7 @@ extern class Client {
 extern class Room {
     
     public var state(default, never):Dynamic;
+    public var sessionId(default, never):String;
     public var id(default, never):String;
     public var name(default, never):String;
 
