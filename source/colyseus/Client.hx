@@ -36,3 +36,20 @@ enum abstract RoomEvent(String) {
     var ERROR = "error";
     
 }
+
+extern class LobbyRoom {
+
+    public var name(default, never):String;
+    public var roomId(default, never):String;
+    public var processId(default, never):String; 
+    public var clients(default, never):Int;
+    public var maxClients(default, never):Int;
+	public var metadata(default, never):Dynamic; 
+	
+	// The fields below may become lost when Defold processed the data (but still were sent by the server).
+	public var createdAt(default, never):String;
+    public var locked(default, never):Bool;
+    public var unlisted(default, never):Bool;
+    @:native("private") public var private_(default, never):Bool;
+
+}
