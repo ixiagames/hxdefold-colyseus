@@ -40,7 +40,7 @@ enum abstract RoomEvent(String) {
     
 }
 
-extern class LobbyRoom {
+extern class RoomInfoInLobby {
 
     public var name(default, never):String;
     public var roomId(default, never):String;
