@@ -19,6 +19,7 @@ extern class Room {
     public var sessionId(default, never):String;
     public var id(default, never):String;
     public var name(default, never):String;
+    public var connection(default, never):Dynamic;
 
     public function send(type:EitherType<String, Int>, ?message:Dynamic):Void;
     public function leave(consented:Bool):Void;
