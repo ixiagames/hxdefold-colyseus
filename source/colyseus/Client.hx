@@ -10,6 +10,7 @@ extern class Client {
     public function create(room_name:String, options:Dynamic, callback:(error:String, room:Room)->Void):Void;
     public function join_or_create(room_name:String, options:Dynamic, callback:(error:String, room:Room)->Void):Void;
     public function join_by_id(room_id:String, options:Dynamic, callback:(error:String, room:Room)->Void):Void;
+    public function consume_seat_reservation(reservation:Dynamic, callback:(error:String, room:Room)->Void):Void;
 
 }
 
